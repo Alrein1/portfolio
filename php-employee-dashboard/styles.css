@@ -1,0 +1,75 @@
+nav {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background-color: cornflowerblue;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.dashboard-title {
+    text-align: center;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-employees {
+    flex-grow: 1;
+    border: 1px solid cornflowerblue;
+}
+
+.dashboard-tasks {
+    flex-grow: 2;
+    border: 1px solid cornflowerblue;
+}
+
+.task-footer{
+    display: flex;
+}
+
+.employees-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.employee-card, .task-card {
+    border: 1px solid cornflowerblue;
+    border-radius: 0.5rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.employees-form, .task-form {
+    padding: 0 1rem 0 1rem;
+}
+
+nav, .employees-form, .employees-holder, .dashboard {
+
+}
+
+.employees-holder, .tasks-holder {
+    margin: 0 1rem 0 1rem;
+}
+
+.main {
+    color: white;
+    margin-left: 30%;
+    width: 40%;
+    height: 100vmin;
+    background-color: #424141;
+}
