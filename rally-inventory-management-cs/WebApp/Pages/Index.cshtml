@@ -1,0 +1,80 @@
+﻿@page
+@model InventoryModel
+@{
+
+}
+<div class="container">
+    <!-- Add search form -->
+    <form method="get" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="searchQuery" class="form-label">Search Items</label>
+                    <input type="text" class="form-control" id="searchQuery" name="searchQuery"
+                           value="@Model.SearchQuery"
+                           placeholder="Example: bolt, !nut, filter">
+                    <small class="form-text text-muted">
+                        Use comma for multiple terms, ! to exclude terms
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="categoryId" class="form-label">Category</label>
+                    <select class="form-select" id="categoryId" name="categoryId">
+                        <option value="">All Categories</option>
+                        @foreach (var category in Model.Categories!)
+                        {
+                            <option value="@category.Id"
+                                    selected="@(Model.CategoryId == category.Id)">
+                                @category.Name
+                            </option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="quantityFilter" class="form-label">Quantity Filter</label>
+                    <select class="form-select" id="quantityFilter" name="quantityFilter">
+                        <option value="" selected="@(string.IsNullOrEmpty(Model.QuantityFilter))">All</option>
+                        <option value="below" selected="@(Model.QuantityFilter == "below")">Below Optimal</option>
+                        <option value="above" selected="@(Model.QuantityFilter == "above")">Above Optimal</option>
+                        <option value="zero" selected="@(Model.QuantityFilter == "zero")">Out of Stock</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary mb-3">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Quantity</th>
+                <th>Optimal Quantity</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Items!)
+            {
+                <tr class="@(item.Quantity < item.OptimalQuantity ? "table-warning" : "") @(item.Quantity == 0 ? "table-danger" : "")">
+                    <td>@item.Name</td>
+                    <td>@item.Category.Name</td>
+                    <td>@item.Location.ToString()</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.OptimalQuantity</td>
+                    <td>@item.Price.ToString("C2")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Web.Pages.Game.IndexModel
+@{
+    ViewData["Title"] = "Tic-Tac-Two";
+}
+
+<div class="container">
+    <h1>Tic-Tac-Two</h1>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <a class="btn btn-primary btn-lg btn-block" asp-page="./New">Create New Game</a>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-secondary btn-lg btn-block" asp-page="./Join">Join Existing Game</a>
+        </div>
+    </div>
+</div>

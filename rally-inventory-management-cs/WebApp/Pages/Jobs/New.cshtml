@@ -1,0 +1,87 @@
+﻿@page
+@model NewJobModel
+@{
+    ViewData["Title"] = "Create New Job";
+}
+<body onload="addItem()">
+<div class="container">
+    
+    <h2>Create New Job</h2>
+
+    @if (!ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var modelError in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@modelError.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <form method="post">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="form-group mb-3">
+                    <label asp-for="NewJob!.Title" class="form-label">Job Title</label>
+                    <input asp-for="NewJob!.Title" class="form-control" required/>
+                    <span asp-validation-for="NewJob!.Title" class="text-danger"></span>
+                </div>
+
+                <h4>Required Items</h4>
+                <div id="itemsContainer">
+                    
+                </div>
+
+                <div class="mb-3">
+                    <button type="button" class="btn btn-secondary" onclick="addItem()">Add More Items</button>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">Save Job</button>
+                    <a asp-page="./Index" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+@section Scripts {
+    <script>
+        function addItem() {
+            const container = document.getElementById('itemsContainer');
+            const index = container.children.length;
+            const template = `
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Item</label>
+                        <select name="NewJob.RequiredItems[${index}].ItemId" 
+                                class="form-select" 
+                                required>
+                            <option value="">Select Item</option>
+                            @foreach (var item in Model.Items!)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Quantity</label>
+                        <input name="NewJob.RequiredItems[${index}].ItemQuantity" 
+                               class="form-control" 
+                               type="number" 
+                               min="1" 
+                               required />
+                    </div>
+                    ${index > 0 ? "<div class=\"col-md-2 d-flex align-items-end\">\n                        <button type=\"button\" class=\"btn btn-danger\" onclick=\"removeItem(this)\">Remove</button>\n                    </div>" : ""}
+
+                </div>`;
+            container.insertAdjacentHTML('beforeend', template);
+        }
+
+        function removeItem(button) {
+            button.closest('.row').remove();
+        }
+    </script>
+}

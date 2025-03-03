@@ -1,0 +1,74 @@
+﻿@page
+@model Web.Pages.Configurations.IndexModel
+@{
+    ViewData["Title"] = "Game Configurations";
+}
+
+<div class="container">
+    <h2>Game Configurations</h2>
+
+    <div class="mb-3">
+        <a asp-page="./Create" class="btn btn-primary">Create New Configuration</a>
+    </div>
+
+    @if (!string.IsNullOrEmpty(TempData["Error"] as string))
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(TempData["Message"] as string))
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Board Width</th>
+                <th>Board Height</th>
+                <th>Win Condition</th>
+                <th>Move Piece After</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var config in Model.Configurations)
+            {
+                <tr>
+                    <td>@config.Name</td>
+                    <td>@config.BoardSizeWidth</td>
+                    <td>@config.BoardSizeHeight</td>
+                    <td>@config.WinCondition</td>
+                    <td>@config.MovePieceAfterNMoves</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-name="@config.Name" class="btn btn-sm btn-primary">Edit</a>
+                        <button type="button" class="btn btn-sm btn-danger"
+                                onclick="confirmDelete('@config.Name')">Delete</button>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+
+    <form id="deleteForm" method="post" asp-page-handler="Delete" style="display: none;">
+        <input type="hidden" id="configToDelete" name="configName" />
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(configName) {
+            if (confirm('Are you sure you want to delete this configuration?')) {
+                document.getElementById('configToDelete').value = configName;
+                document.getElementById('deleteForm').submit();
+            }
+        }
+    </script>
+}

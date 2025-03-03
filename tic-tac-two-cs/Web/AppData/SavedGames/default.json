@@ -1,0 +1,9 @@
+{
+  "GameName": "default_2025-01-10_07-59-33",
+  "GameState": "{\u0022GameBoard\u0022:[[0,0,0,0,0],[0,0,2,0,0],[0,0,0,1,0],[0,0,0,0,0],[0,0,0,0,0]],\u0022NextMoveBy\u0022:1,\u0022GameMode\u0022:0,\u0022GameConfiguration\u0022:{\u0022ConfigId\u0022:1,\u0022Name\u0022:\u0022default\u0022,\u0022BoardSizeWidth\u0022:5,\u0022BoardSizeHeight\u0022:5,\u0022WinCondition\u0022:3,\u0022MovePieceAfterNMoves\u0022:4},\u0022MovesPlayed\u0022:2,\u0022GridPosition\u0022:{\u0022Item1\u0022:1,\u0022Item2\u0022:1}}",
+  "ConfigId": 0,
+  "Config": null,
+  "Id": 0,
+  "CreatedAt": "2025-01-10T07:59:33.7524682+02:00",
+  "ModifiedAt": "2025-01-10T07:59:33.7524909+02:00"
+}

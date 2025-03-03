@@ -1,0 +1,43 @@
+﻿@page
+@model UsedInventoryModel
+@{
+    ViewData["Title"] = "Restock report";
+}
+<div class="container">
+    <h2>Inventory Restock Report</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Current Quantity</th>
+                <th>Optimal Quantity</th>
+                <th>Needed Quantity</th>
+                <th>Estimated Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.ItemsToRestock!)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Category.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.OptimalQuantity</td>
+                    <td>@(item.OptimalQuantity - item.Quantity)</td>
+                    <td>@((item.OptimalQuantity - item.Quantity) * item.Price)</td>
+                </tr>
+            }
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="5" class="text-end"><strong>Total Estimated Cost:</strong></td>
+                <td>@Model.TotalRestockCost.ToString("C2")</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,1 @@
+## C# razor pages based web application for managing inventory.

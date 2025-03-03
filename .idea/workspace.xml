@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3db7891d-9c8f-4cee-8cc7-20678509d961" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/.idea/.idea.exam/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/.idea/.idea.exam/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/.idea/.idea.exam/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/AppDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/CategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/DAL.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/ICategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/IItemRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/IJobRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/ItemRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/JobRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117091346_Initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117091346_Initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117095621_job_timesperformed.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117095621_job_timesperformed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117104130_sampletext.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117104130_sampletext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117113137_h.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117113137_h.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117140400_final.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/20250117140400_final.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/DAL/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/Domain.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/FileHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/ItemCategory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/ItemLocation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/Job.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/JobHistory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/RequiredItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/UsedItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Domain/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Error.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Error.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Jobs/New.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Jobs/New.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Jobs/index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Jobs/index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Privacy.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Privacy.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Reports/Inventory.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Reports/Inventory.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Reports/JobHistory.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Reports/JobHistory.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Shared/_Layout.cshtml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Pages/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/WebApp.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/dist/jquery.slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/dist/jquery.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/WebApp/wwwroot/lib/jquery/dist/jquery.slim.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rally-inventory-management-cs/exam.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/metadata.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm/LibrariesForLibs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/dependencies-accessors/91e51b11932b7893b6411faaf331058278bf7916/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/8.10/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/config/AppConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/config/ApplicationInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/controller/OrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/dao/OrderDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/model/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/model/OrderRow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/model/ValidationError.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/model/ValidationErrors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/classes/java/main/util/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/inplaceWebapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/inplaceWebapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/reports/pmd/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/reports/pmd/main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/resources/main/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/tmp/compileJava/compileTransaction/stash-dir/OrderController.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/build/tmp/pmdMain/incremental.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/lib/hsqldb-2.7.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/lib/postgresql-42.7.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/pmd/ruleset.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/db/db.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/db/db.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/db/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/db/db.script" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/config/ApplicationInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/dao/OrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/listener/AppContextListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/model/OrderRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/model/ValidationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/model/ValidationErrors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/servlet/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/servlet/OrderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/util/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/.idea/.idea.icd0008-24f/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/.idea/.idea.icd0008-24f/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/.idea/.idea.icd0008-24f/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/.idea/.idea.icd0008-24f/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/.idea/.idea.icd0008-24f/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleApp/ConfigsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleApp/ConsoleApp.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleApp/GameController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleApp/Menus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleApp/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleApp/SavedGamesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleUI/ConsoleUI.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleUI/Helpers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleUI/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/ConsoleUI/Visualizer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/AppDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/AppDbContextFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/ConfigRepositoryDb.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/ConfigRepositoryHardcoded.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/ConfigRepositoryJson.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/ConfigurationDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/DAL.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/EStorageType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/FileHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/GameRepositoryDb.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/GameRepositoryJson.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/IConfigRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/IGameRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/Migrations/20250110033415_Initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/Migrations/20250110033415_Initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/DAL/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Domain/BaseEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Domain/Config.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Domain/Domain.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Domain/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Domain/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/EGamePiece.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/EGameStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/GameAI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/GameBrain.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/GameConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/GameMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/GameState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/GameBrain/TicTacTwoBrain.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/MenuSystem/Class1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/MenuSystem/EMenuLevel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/MenuSystem/Menu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/MenuSystem/MenuItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/MenuSystem/MenuSystem.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/MenuSystem/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/AppData/Configs/default.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/AppData/SavedGames/default.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Hubs/GameHub.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Models/GameMoveResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Configurations/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Configurations/Create.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Configurations/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Configurations/Edit.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Configurations/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Configurations/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Error.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Error.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/Join.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/Join.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/LoadGame.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/LoadGame.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/New.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/New.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/Play.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Game/Play.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Privacy.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Privacy.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Shared/_Layout.cshtml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Pages/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Services/ActiveGamesManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Services/GameService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Services/IActiveGamesManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Services/IGameService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/Web.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/js/game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/dist/jquery.slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/dist/jquery.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/Web/wwwroot/lib/jquery/dist/jquery.slim.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/icd0008-24f.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/libman.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/wwwroot/lib/microsoft/signalr/dist/browser/signalr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tic-tac-two-cs/wwwroot/lib/microsoft/signalr/dist/browser/signalr.min.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2toAZIKKOgtdvtWLk12RDE8LYTy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/Alex/portfolio/spring",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\portfolio\spring" />
+      <recent name="C:\Users\Alex\portfolio\icd0008-24f" />
+      <recent name="C:\Users\Alex\portfolio" />
+      <recent name="C:\Users\Alex\portfolio\exam" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\portfolio" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3db7891d-9c8f-4cee-8cc7-20678509d961" name="Changes" comment="" />
+      <created>1741008109198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741008109198</updated>
+      <workItem from="1741008110205" duration="1181000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+</project>

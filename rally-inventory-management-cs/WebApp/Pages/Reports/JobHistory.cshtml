@@ -1,0 +1,84 @@
+﻿@page
+@model JobHistoryModel
+@{
+    ViewData["Title"] = "Service history";
+}
+<div class="container">
+    <h2>Service Report</h2>
+
+    <form method="get" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">From Date</label>
+                <input type="date" class="form-control" name="FromDate" value="@Model.FromDate?.ToString("yyyy-MM-dd")">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">To Date</label>
+                <input type="date" class="form-control" name="ToDate" value="@Model.ToDate?.ToString("yyyy-MM-dd")">
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Job</th>
+                <th>Materials Used</th>
+                <th>Total Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var job in Model.JobHistory!)
+            {
+                <tr>
+                    <td>@job.PerformedAt.ToLocalTime().ToString("g")</td>
+                    <td>@job.JobTitle</td>
+                    <td>
+                        @foreach (var item in job.UsedItems)
+                        {
+                            <div>@item.ItemName (@item.Quantity) - @item.CategoryName</div>
+                        }
+                    </td>
+                    <td>@job.TotalCost.ToString("C2")</td>
+                </tr>
+            }
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3" class="text-end"><strong>Total Cost:</strong></td>
+                <td>@Model.TotalCost.ToString("C2")</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="mt-4">
+        <h3>Materials Summary</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Total Quantity Used</th>
+                <th>Total Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var summary in Model.MaterialsSummary!)
+            {
+                <tr>
+                    <td>@summary.ItemName</td>
+                    <td>@summary.CategoryName</td>
+                    <td>@summary.TotalQuantity</td>
+                    <td>@summary.TotalCost.ToString("C2")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

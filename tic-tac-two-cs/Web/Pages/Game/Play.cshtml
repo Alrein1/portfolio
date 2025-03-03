@@ -1,0 +1,349 @@
+@page "{gameName}"
+@model Web.Pages.Game.PlayModel
+@{
+    ViewData["Title"] = "Play Tic-Tac-Two";
+}
+
+<div class="game-container">
+    @Html.AntiForgeryToken()
+
+    <div class="game-info">
+        <h2>Game: @Model.GameName</h2>
+        <h3>Playing as: <span id="playerPiece">Waiting...</span></h3>
+        <h3>Current Player: <span id="currentPlayer">@Model.Game!.GetNextMoveBy()</span></h3>
+        <div id="waitingMessage" class="alert alert-info" style="display: none;">
+            Waiting for opponent to join...
+        </div>
+    </div>
+
+    <div class="game-board mt-4">
+        @for (var y = 0; y < Model.Game.DimY; y++)
+        {
+            <div class="board-row">
+                @for (var x = 0; x < Model.Game.DimX; x++)
+                {
+                    var isInGrid = Model.Game.IsInGrid(x, y);
+                    <div class="board-cell @(isInGrid ? "in-grid" : "")"
+                         data-x="@x"
+                         data-y="@y"
+                         onclick="handleCellClick(this)">
+                        @(Model.Game.GameBoard[x][y] == GameBrain.EGamePiece.Empty ? "" : Model.Game.GameBoard[x][y].ToString())
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="game-controls mt-4">
+        <button class="btn btn-primary" onclick="setAction('place')">Place Piece</button>
+        <button class="btn btn-secondary" onclick="setAction('move')">Move Piece</button>
+        <button class="btn btn-info" onclick="setAction('grid')">Move Grid</button>
+        <button class="btn btn-success" onclick="saveGame()">Save Game</button>
+    </div>
+
+    <div id="gameMessage" class="mt-3 alert" style="display: none;"></div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+    <script>
+        let currentAction = 'place';
+        let moveFrom = null;
+        let myPiece = null;
+        let gameReady = false;
+        let isAIThinking = false;
+        let connection = null;
+
+        function showMessage(message, type) {
+            const messageDiv = document.getElementById('gameMessage');
+            messageDiv.textContent = message;
+            messageDiv.className = `alert alert-${type}`;
+            messageDiv.style.display = 'block';
+
+            if (!message.startsWith('Game Over')) {
+                setTimeout(() => messageDiv.style.display = 'none', 3000);
+            }
+        }
+        
+        function updateBoard(board) {
+            const cells = document.querySelectorAll('.board-cell');
+            cells.forEach(cell => {
+                const x = parseInt(cell.dataset.x);
+                const y = parseInt(cell.dataset.y);
+                let piece = '';
+                if (board[x][y] === 1) piece = 'X';
+                if (board[x][y] === 2) piece = 'O';
+                cell.textContent = piece;
+            });
+        }
+
+        function updateCurrentPlayer(player) {
+            document.getElementById('currentPlayer').textContent = player;
+        }
+
+        function updateGridPosition(gridPosition) {
+            const cells = document.querySelectorAll('.board-cell');
+            cells.forEach(cell => {
+                const x = parseInt(cell.dataset.x);
+                const y = parseInt(cell.dataset.y);
+                const gridX = gridPosition.x ?? gridPosition.Item1;
+                const gridY = gridPosition.y ?? gridPosition.Item2;
+
+                if (x >= gridX && x < gridX + 3 &&
+                    y >= gridY && y < gridY + 3) {
+                    cell.classList.add('in-grid');
+                } else {
+                    cell.classList.remove('in-grid');
+                }
+            });
+        }
+
+        function handleGameOver(message) {
+            showMessage("Game Over! " + message, "success");
+            disableBoard();
+        }
+
+        function disableBoard() {
+            const cells = document.querySelectorAll('.board-cell');
+            cells.forEach(cell => {
+                cell.style.pointerEvents = 'none';
+            });
+
+            document.querySelectorAll('.game-controls button').forEach(button => {
+                if (!button.onclick.toString().includes('saveGame')) {
+                    button.disabled = true;
+                }
+            });
+        }
+
+        function handleGameResponse(response) {
+            console.log('Game response:', response);
+
+            if (!response.success) {
+                showMessage(response.error || "Invalid move", "danger");
+                return;
+            }
+
+            updateBoard(response.board);
+            updateCurrentPlayer(response.nextPlayer);
+
+            if (response.gridPosition) {
+                updateGridPosition(response.gridPosition);
+            }
+
+            switch (response.gameStatus) {
+                case 1: // XWon
+                    handleGameOver("X Wins!");
+                    break;
+                case 2: // OWon
+                    handleGameOver("O Wins!");
+                    break;
+                case 3: // Draw
+                    handleGameOver("It's a Draw!");
+                    break;
+                default:
+                    if (response.IsAITurn) {
+                        document.getElementById('currentPlayer').textContent += " (AI thinking...)";
+                    }
+            }
+        }
+
+        function handleCellClick(cell) {
+            if (!gameReady) {
+                showMessage("Waiting for game to start...", "warning");
+                return;
+            }
+
+            const x = parseInt(cell.dataset.x);
+            const y = parseInt(cell.dataset.y);
+
+            console.log(`Cell clicked: x=${x}, y=${y}`);
+
+            switch(currentAction) {
+                case 'place':
+                    makeMove(x, y);
+                    break;
+                case 'move':
+                    handlePieceMove(x, y);
+                    break;
+                case 'grid':
+                    moveGrid(x, y);
+                    break;
+            }
+        }
+
+        async function makeMove(x, y) {
+            if (!connection || connection.state !== "Connected") {
+                showMessage("Not connected to game server. Trying to reconnect...", "warning");
+                await startConnection();
+                return;
+            }
+
+            try {
+                console.log(`Making move at: x=${x}, y=${y}`);
+                await connection.invoke("MakeMove", "@Model.GameName", x, y);
+            } catch (error) {
+                console.error('Error making move:', error);
+                showMessage('Error making move: ' + error.message, 'danger');
+            }
+        }
+
+        async function handlePieceMove(x, y) {
+            if (!gameReady) {
+                showMessage("Waiting for game to start...", "warning");
+                return;
+            }
+
+            if (moveFrom === null) {
+                const cell = document.querySelector(`.board-cell[data-x="${x}"][data-y="${y}"]`);
+                if (cell.textContent === '') {
+                    showMessage('Please select a piece to move', 'warning');
+                    return;
+                }
+
+                moveFrom = { x, y };
+                cell.classList.add('selected');
+                showMessage('Select destination cell', 'info');
+            } else {
+                try {
+                    if (!connection || connection.state !== "Connected") {
+                        showMessage("Not connected to game server. Trying to reconnect...", "warning");
+                        await startConnection();
+                        return;
+                    }
+
+                    console.log(`Moving piece from (${moveFrom.x},${moveFrom.y}) to (${x},${y})`);
+                    await connection.invoke("MovePiece", "@Model.GameName", moveFrom.x, moveFrom.y, x, y);
+
+                    document.querySelector('.board-cell.selected')?.classList.remove('selected');
+                    moveFrom = null;
+                } catch (error) {
+                    console.error('Error moving piece:', error);
+                    showMessage('Error moving piece: ' + error.message, 'danger');
+                    document.querySelector('.board-cell.selected')?.classList.remove('selected');
+                    moveFrom = null;
+                }
+            }
+        }
+
+        async function moveGrid(x, y) {
+            if (!gameReady) {
+                showMessage("Waiting for game to start...", "warning");
+                return;
+            }
+
+            try {
+                if (!connection || connection.state !== "Connected") {
+                    showMessage("Not connected to game server. Trying to reconnect...", "warning");
+                    await startConnection();
+                    return;
+                }
+
+                console.log(`Moving grid to (${x},${y})`);
+                await connection.invoke("MoveGrid", "@Model.GameName", x, y);
+            } catch (error) {
+                console.error('Error moving grid:', error);
+                showMessage('Error moving grid: ' + error.message, 'danger');
+            }
+        }
+
+        async function startConnection() {
+            if (connection) {
+                await connection.stop();
+            }
+
+            connection = new signalR.HubConnectionBuilder()
+                .withUrl("/gameHub")
+                .withAutomaticReconnect()
+                .build();
+
+            setupConnectionHandlers();
+
+            try {
+                await connection.start();
+                console.log("Connected to hub");
+                await connection.invoke("JoinGame", "@Model.GameName", "@Model.Password");
+            } catch (err) {
+                console.error("Error:", err);
+                showMessage("Connection failed. Retrying...", "danger");
+                setTimeout(startConnection, 5000);
+            }
+        }
+        
+        async function saveGame() {
+            try {
+                console.log("Attempting to save game...");
+                await connection.invoke("SaveGame", "@Model.GameName");
+            } catch (error) {
+                console.error('Error saving game:', error);
+                showMessage('Error saving game: ' + error.message, 'danger');
+            }
+        }
+    
+        function setupConnectionHandlers() {
+            connection.on("PlayerJoined", (playerId, piece) => {
+                console.log("Player joined:", playerId, "as", piece);
+                myPiece = piece;
+                document.getElementById('playerPiece').textContent = piece;
+                
+                if (piece !== "Spectator" && !gameReady) {
+                    document.getElementById('waitingMessage').style.display = 'block';
+                }
+            });
+            connection.on("GameSaved", (message) => {
+                console.log("Save response:", message);
+                showMessage(message, "success");
+            });
+
+            connection.on("GameReady", () => {
+                console.log("Game is ready!");
+                gameReady = true;
+                document.getElementById('waitingMessage').style.display = 'none';
+                showMessage("Game is ready to start!", "success");
+            });
+
+            connection.on("MoveMade", (result) => {
+                console.log("Move made:", result);
+                handleGameResponse(result);
+            });
+
+            connection.on("PieceMoved", (result) => {
+                console.log("Piece moved:", result);
+                handleGameResponse(result);
+            });
+
+            connection.on("GridMoved", (result) => {
+                console.log("Grid moved:", result);
+                handleGameResponse(result);
+            });
+
+            connection.on("MoveError", (error) => {
+                console.error("Move error:", error);
+                showMessage(error, "danger");
+            });
+        }
+
+        function setAction(action) {
+            currentAction = action;
+            // Clear any existing selection when changing actions
+            if (moveFrom !== null) {
+                document.querySelector('.board-cell.selected')?.classList.remove('selected');
+                moveFrom = null;
+            }
+            showMessage(`Action set to: ${action}`, 'info');
+        }
+        
+
+        // Add escape key handler for canceling piece movement
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && moveFrom !== null) {
+                document.querySelector('.board-cell.selected')?.classList.remove('selected');
+                moveFrom = null;
+                showMessage('Move cancelled', 'info');
+            }
+        });
+
+        // Start the connection when the page loads
+        startConnection();
+    </script>
+}

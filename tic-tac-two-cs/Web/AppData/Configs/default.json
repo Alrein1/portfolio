@@ -1,0 +1,8 @@
+{
+  "ConfigId": 1,
+  "Name": "default",
+  "BoardSizeWidth": 5,
+  "BoardSizeHeight": 5,
+  "WinCondition": 3,
+  "MovePieceAfterNMoves": 4
+}
